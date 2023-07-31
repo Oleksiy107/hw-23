@@ -178,11 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
       alert(`Sorry, your information is not complete.`);
       return;
     }
-
-    if (!isNaN(pib) || !isNaN(city) || isNaN(quantity)) {
-      alert("Please enter valid information.");
+    
+    if (isNaN(+quantity) || +quantity < 0 || isNaN(+delivery) || +delivery < 0)  {
+      alert("Please enter a valid positive number for quantity.");
       return;
     }
+  
 
     let orderInfo = `Details about delivery\n`;
     orderInfo += "Full name: " + pib + '\n';
