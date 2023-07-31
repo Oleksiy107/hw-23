@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="main-container">
+        <div class="categories" id="categories-container">
+            <h2>Categories</h2>
+        </div>
+        <div class="products" id="product-list"></div>
+        <div class="product-info" id="product-info"></div>
+    </div>
+
+    <form id="formDelivery" class="hidden">
+        <label for="pib">Full name:</label>
+        <input type="text" id="pib" required><br><br>
+        <label for="city">City:</label>
+        <select id="city" required>
+            <option value="kiev">Kiev</option>
+            <option value="dnipro">Dnipro</option>
+        </select><br><br>
+        <label for="delivery">Storage Nova Post:</label>
+        <input type="text" id="delivery" required><br><br>
+        <label for="pay">Payment method:</label>
+        <select id="pay" required>
+            <option value="after receiving">After receiving</option>
+            <option value="payment by card">Payment by card</option>
+        </select>
+        <label for="quantity">Quantity of goods:</label>
+        <input type="number" id="quantity" required><br><br>
+        <label for="comment">Comment:</label>
+        <textarea id="comment"></textarea><br><br>
+        <button type="button" id="buyBtn1">Buy</button>
+    </form>
+
+    <button id="showPurchaseHistoryBtn">Show Purchase History</button>
+    <button id="hidePurchaseHistoryBtn">Hide Purchase History</button>
+    <div id="order-list-container">
+        <h2>My Orders</h2>
+        <div id="order-list"></div>
+    </div>
+    <div id="purchaseHistoryList">
+    </div>
+
+    <div id="purchaseHistory"></div>
+
+    <script src="./script.js">
+
+    </script>
+
+</body>
+
+</html>
